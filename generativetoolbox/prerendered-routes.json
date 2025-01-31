@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "/burger-menu": {},
+    "/category-container": {},
+    "/color-switch": {},
+    "/nav-container": {},
+    "/settings-container": {},
+    "/workspace": {}
+  }
+}

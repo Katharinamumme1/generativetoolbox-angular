@@ -1,0 +1,2 @@
+export default `@charset "UTF-8";:root{--primary-color: #ffffff;--secondary-color: #a600ff}body{background-color:var(--primary-color);color:var(--secondary-color);font-family:monospace;padding:0;height:100vh;margin:0;overflow:scroll}*{box-sizing:border-box}
+`;
