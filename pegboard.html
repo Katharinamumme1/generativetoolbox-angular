@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegboard Tool</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-color: #f4f4f4;
+        }
+
+        #container {
+            position: relative;
+            width: 200vw;
+            height: 200vh;
+            transform: translate(-50vw, -50vh); /* Start in der Mitte */
+            transition: transform 0.3s ease; /* Sanftere Animation beim Draggen */
+        }
+
+        .category {
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.5s ease;
+        }
+
+        .category:hover {
+            transform: scale(1.1);
+        }
+
+        .link-list {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .link-list a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            background-color: #ddd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: background-color 0.3s, fill 0.3s;
+        }
+
+        .link-list a .category-circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #333;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .link-list a:hover .category-circle,
+        .link-list a.active .category-circle {
+            background-color: #333;
+            border-color: #555;
+        }
+
+        .link-list a:hover {
+            background-color: #bbb;
+        }
+
+        .background-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200vw;
+            height: 200vh;
+            z-index: -1;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'><circle cx='12.5' cy='12.5' r='10' stroke=    color: 'var(--secondary-color)''; stroke-width='1' fill='none'/></svg>");
+            background-size: 25px 25px;
+            background-repeat: repeat;
+        }
+
+        /* Cursor als kleiner Punkt */
+        body, #container {
+            cursor: none;
+        }
+
+        #cursor {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 200;
+            transition: transform 0.2s ease;
+        }
+
+        #container.grabbing {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+    <div id="cursor"></div> <!-- Punkt-Cursor -->
+    <div class="link-list">
+        <a href="#" onclick="navigateAndZoom('font1', this)">
+            <div class="category-circle"></div>
+            Font 1
+        </a>
+        <a href="#" onclick="navigateAndZoom('font2', this)">
+            <div class="category-circle"></div>
+            Font 2
+        </a>
+        <a href="#" onclick="navigateAndZoom('font3', this)">
+            <div class="category-circle"></div>
+            Font 3
+        </a>
+        <a href="#" onclick="navigateAndZoom('font4', this)">
+            <div class="category-circle"></div>
+            Font 4
+        </a>
+        <a href="#" onclick="navigateAndZoom('font5', this)">
+            <div class="category-circle"></div>
+            Font 5
+        </a>
+        <a href="#" onclick="navigateAndZoom('pattern1', this)">
+            <div class="category-circle"></div>
+            Pattern 1
+        </a>
+        <a href="#" onclick="navigateAndZoom('pattern2', this)">
+            <div class="category-circle"></div>
+            Pattern 2
+        </a>
+        <a href="#" onclick="navigateAndZoom('pattern3', this)">
+            <div class="category-circle"></div>
+            Pattern 3
+        </a>
+        <a href="#" onclick="navigateAndZoom('pattern4', this)">
+            <div class="category-circle"></div>
+            Pattern 4
+        </a>
+        <a href="#" onclick="navigateAndZoom('pattern5', this)">
+            <div class="category-circle"></div>
+            Pattern 5
+        </a>
+    </div>
+
+    <div class="background-placeholder"></div>
+
+    <div id="container">
+        <div id="font1" class="category" style="top: 100px; left: 100px;">Font 1</div>
+        <div id="font2" class="category" style="top: 500px; left: 600px;">Font 2</div>
+        <div id="font3" class="category" style="top: 900px; left: 1200px;">Font 3</div>
+        <div id="font4" class="category" style="top: 1300px; left: 1800px;">Font 4</div>
+        <div id="font5" class="category" style="top: 1700px; left: 2400px;">Font 5</div>
+
+        <div id="pattern1" class="category" style="top: 300px; left: 200px;">Pattern 1</div>
+        <div id="pattern2" class="category" style="top: 700px; left: 800px;">Pattern 2</div>
+        <div id="pattern3" class="category" style="top: 1100px; left: 1400px;">Pattern 3</div>
+        <div id="pattern4" class="category" style="top: 1500px; left: 2000px;">Pattern 4</div>
+        <div id="pattern5" class="category" style="top: 1900px; left: 2600px;">Pattern 5</div>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const cursor = document.getElementById('cursor');
+        let translateX = -window.innerWidth / 2;
+        let translateY = -window.innerHeight / 2;
+        let isDragging = false;
+        let startX, startY;
+
+        container.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX - translateX;
+            startY = e.clientY - translateY;
+            container.classList.add('grabbing');
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+
+            if (!isDragging) return;
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            container.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        });
+
+        container.addEventListener('mouseup', () => {
+            isDragging = false;
+            container.classList.remove('grabbing');
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isDragging = false;
+            container.classList.remove('grabbing');
+        });
+
+        function navigateAndZoom(categoryId, linkElement) {
+            const targetElement = document.getElementById(categoryId);
+            const rect = targetElement.getBoundingClientRect();
+
+            const offsetX = window.innerWidth / 2 - (rect.left + rect.width / 2);
+            const offsetY = window.innerHeight / 2 - (rect.top + rect.height / 2);
+
+            translateX += offsetX;
+            translateY += offsetY;
+
+            container.style.transition = 'transform 0.8s ease';
+            container.style.transform = `translate(${translateX}px, ${translateY}px)`;
+
+            document.querySelectorAll('.link-list a').forEach(link => link.classList.remove('active'));
+            linkElement.classList.add('active');
+        }
+    </script>
+</body>
+</html>

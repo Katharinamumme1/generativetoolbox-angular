@@ -1,0 +1,37 @@
+<div class="settingscontainer">
+    <label>Layout:</label>
+    <select [formControl]="settingsForm.controls.layout">
+        <option value="horizontal">Horizontal</option>
+        <option value="vertical">Vertical</option>
+        <option value="grid">Grid</option>
+    </select>
+
+    <label>Line Count:</label>
+    <input type="range" min="10" max="100" [formControl]="settingsForm.controls.lineCount">
+    <span>{{ settingsForm.value.lineCount }}</span>
+
+    <label>Amplitude:</label>
+    <input type="range" min="1" max="50" [formControl]="settingsForm.controls.amplitude">
+    <span>{{ settingsForm.value.amplitude }}</span>
+
+    <label>Brush Strength:</label>
+    <input type="range" min="1" max="200" [formControl]="settingsForm.controls.brushStrength">
+    <span>{{ settingsForm.value.brushStrength }}</span>
+
+    <label>Line Width:</label>
+    <input type="range" min="1" max="10" [formControl]="settingsForm.controls.lineWidth">
+    <span>{{ settingsForm.value.lineWidth }}</span>
+
+
+    <label>Distortion Type:</label>
+    <select [formControl]="settingsForm.controls.distortionType">
+        <option *ngFor="let type of distortionTypes" [value]="type">{{ type }}</option>
+    </select>
+
+
+
+</div>
+
+<div class="workspace">
+    <svg #canvasContainer id="distortlines_canvas" ></svg>
+</div>

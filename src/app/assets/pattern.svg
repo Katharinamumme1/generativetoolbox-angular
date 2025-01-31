@@ -1,0 +1,33 @@
+<svg width="4000" height="4000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hintergrund -->
+  <rect width="100%" height="100%" fill="white" />
+  
+  <!-- Pegboard-Löcher als abgerundete Rechtecke -->
+  <g stroke="black" stroke-width="2" fill="none">
+    <script type="text/ecmascript">
+      <![CDATA[
+        var svgNS = "http://www.w3.org/2000/svg";
+        var spacing = 60;
+        var rectWidth = 30;
+        var rectHeight = 50;
+        var radius = 15;
+        var cols = 60;
+        var rows = 60;
+
+        var g = document.querySelector('g');
+        for (var i = 0; i < rows; i++) {
+          for (var j = 0; j < cols; j++) {
+            var rect = document.createElementNS(svgNS, 'rect');
+            rect.setAttribute('x', j * spacing + 20);
+            rect.setAttribute('y', i * spacing + 20);
+            rect.setAttribute('width', rectWidth);
+            rect.setAttribute('height', rectHeight);
+            rect.setAttribute('rx', radius);
+            rect.setAttribute('ry', radius);
+            g.appendChild(rect);
+          }
+        }
+      ]]>
+    </script>
+  </g>
+</svg>

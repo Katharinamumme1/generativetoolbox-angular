@@ -1,0 +1,48 @@
+:host {
+height: 100%;
+width: 100%;
+display: flex;
+}
+
+
+
+#svg-container {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mandalaDrawingSVG {
+    height: 500px;
+    width: 500px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+
+    box-shadow: 5px 5px var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+/* Anpassungen für mobile Geräte */
+@media (max-width: 768px) {
+    :host {
+        display: flex;
+        flex-wrap: wrap;
+
+    align-items: center;
+        justify-content: center;
+        
+
+
+    }
+
+
+
+    #mandalaDrawingSVG {
+        height: 400px;
+        /* SVG auf mobile Geräte anpassen */
+        width: 400px;
+    }
+}

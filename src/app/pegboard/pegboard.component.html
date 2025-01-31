@@ -1,0 +1,116 @@
+
+
+<div class="link-list">
+    <a href="#" (click)="navigateAndZoom('displacementmap', $event)" [class.active]="isActive('font1')">
+        <div class="category-shape"></div>
+        Displacementmap
+    </a>
+    <a href="#" (click)="navigateAndZoom('mandala', $event)" [class.active]="isActive('pattern1')">
+        <div class="category-shape"></div>
+        Mandala
+    </a>
+    <a href="#" (click)="navigateAndZoom('grid-pattern', $event)" [class.active]="isActive('pattern1')">
+        <div class="category-shape"></div>
+        Grid-Pattern
+    </a>
+    <a href="#" (click)="navigateAndZoom('animator', $event)" [class.active]="isActive('pattern1')">
+        <div class="category-shape"></div>
+        Grid-Pattern
+    </a>
+    <a href="#" (click)="navigateAndZoom('custombrush', $event)" [class.active]="isActive('pattern1')">
+        <div class="category-shape"></div>
+        Custom Brush
+    </a>
+    <a href="#" (click)="navigateAndZoom('distortedpattern', $event)" [class.active]="isActive('distortedpattern')">
+        <div class="category-shape"></div>
+        Distorted Pattern
+    </a>
+
+        <a href="#" (click)="navigateAndZoom('delaunay', $event)" [class.active]="isActive('delaunay')">
+            <div class="category-shape"></div>
+            delaunay
+        </a>
+        <a href="#" (click)="navigateAndZoom('custom-stroke-font', $event)" [class.active]="isActive('custom-stroke-font')">
+            <div class="category-shape"></div>
+            custom-stroke-font
+        </a>
+        <a href="#" (click)="navigateAndZoom('fontbaukasten', $event)" [class.active]="isActive('fontbaukasten')">
+            <div class="category-shape"></div>
+            fontbaukasten
+        </a>
+
+        <a href="#" (click)="navigateAndZoom('fontbaukasten', $event)" [class.active]="isActive('handdrawnfont')">
+            <div class="category-shape"></div>
+            handdrawnfont
+        </a>
+</div>
+
+
+<div class="background-placeholder">
+<svg id="pegpattern" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8000 8000">
+    <defs>
+        <pattern id="pegboard" width="60" height="80" patternUnits="userSpaceOnUse">
+            <rect x="15" y="10" width="30" height="60" rx="12" ry="12" fill="none" stroke="var(--secondary-color)" stroke-width="1" />
+        </pattern>
+    </defs>
+    <rect width="8000" height="8000" fill="url(#pegboard)" />
+</svg>
+
+
+
+
+
+
+</div>
+
+<!-- Container -->
+<div id="container"
+    [ngStyle]="{ transform: !isMobile ? 'translate(' + translateX + 'px, ' + translateY + 'px)' : 'none' }"
+    (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)" (mouseup)="onMouseUpOrLeave()"
+    (mouseleave)="onMouseUpOrLeave()">
+    <!-- Kategorie Font 1 -->
+    <div id="displacementmap" class="category" [class.mobile]="isMobile"
+        [ngStyle]="{ top: !isMobile ? '10%' : 'auto', left: !isMobile ? '20%' : 'auto' }">
+        <app-displacement-map></app-displacement-map>
+    </div>
+
+    <!-- Kategorie Pattern 1 -->
+    <div id="mandala"  class="category" [class.mobile]="isMobile"
+        [ngStyle]="{ top: !isMobile ? '60%' : 'auto', left: !isMobile ? '40%' : 'auto' }">
+        <app-mandala></app-mandala>
+    </div>
+        <div id="grid-pattern" class="category" [class.mobile]="isMobile"
+            [ngStyle]="{ top: !isMobile ? '40%' : 'auto', left: !isMobile ? '150%' : 'auto' }">
+            <app-grid-pattern></app-grid-pattern>
+        </div>
+        <div id="animator" class="category" [class.mobile]="isMobile"
+            [ngStyle]="{ top: !isMobile ? '180%' : 'auto', left: !isMobile ? '1050px' : 'auto' }">
+            <app-animator></app-animator>
+        </div>
+
+            <div id="custombrush"  class="category" [class.mobile]="isMobile"
+        [ngStyle]="{ top: !isMobile ? '300%' : 'auto', left: !isMobile ? '800%' : 'auto' }">
+        <app-customBrush></app-customBrush>
+        </div>
+        <div id="distortedpattern" class="category" [class.mobile]="isMobile"
+        [ngStyle]="{ top: !isMobile ? '10%' : 'auto', left: !isMobile ? '100%' : 'auto' }">
+            <app-distortedPattern></app-distortedPattern>
+        </div>
+
+        <div id="delaunay" class="category" [class.mobile]="isMobile"
+                        [ngStyle]="{ top: !isMobile ? '300%' : 'auto', left: !isMobile ? '50%' : 'auto' }">
+            <app-delaunay></app-delaunay>
+        </div>
+                <div id="custom-stroke-font" class="category" [class.mobile]="isMobile"
+                    [ngStyle]="{ top: !isMobile ? '10%' : 'auto', left: !isMobile ? '800%' : 'auto' }">
+                    <app-customStrokeFont></app-customStrokeFont>
+                </div>
+                <div id="fontbaukasten" class="category" [class.mobile]="isMobile"
+                    [ngStyle]="{ top: !isMobile ? '10%' : 'auto', left: !isMobile ? '200%' : 'auto' }">
+                    <app-fontbaukasten></app-fontbaukasten>
+                </div>
+                <div id="handdrawnfont" class="category" [class.mobile]="isMobile"
+                    [ngStyle]="{ top: !isMobile ? '300%' : 'auto', left: !isMobile ? '20%' : 'auto' }">
+                    <app-handdrawnFont></app-handdrawnFont>
+                </div>
+</div>

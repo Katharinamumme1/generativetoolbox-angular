@@ -1,0 +1,23 @@
+        :host {
+            display: flex;
+            flex-direction: row;
+        }
+
+#gridCanvas{
+   height:  100%;
+        width: 100%;
+        border: 2px solid var(--secondary-color);
+        border-radius: 12%;
+            background-color: var(--primary-color);
+            box-shadow: 5px 5px var(--secondary-color);
+            
+}
+@media (max-width: 768px) {
+    :host {
+        display: flex;
+        flex-wrap: wrap;
+
+        align-items: center;
+        justify-content: center; 
+    }
+}

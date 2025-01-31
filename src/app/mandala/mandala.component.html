@@ -1,0 +1,105 @@
+<div class="settingscontainer">
+    <h3>Einstellungen</h3>
+
+    <!-- Spiegelungseinstellungen -->
+    <div class="setting-group">
+        <label for="symmetry">Spiegelungen:</label>
+        <input id="symmetry" type="range" [(ngModel)]="symmetry" min="1" max="50" (input)="updateMirrorLines()" />
+        <span>{{ symmetry }}</span>
+    </div>
+
+    <!-- Strichbreite -->
+    <div class="setting-group">
+        <label for="strokeWidth">Strichbreite:</label>
+        <input id="strokeWidth" type="range" [(ngModel)]="strokeWidth" min="1" max="20" />
+        <span>{{ strokeWidth }}</span>
+    </div>
+
+<div class="setting-group">
+    <label for="strokeStyle">Strichart:</label>
+    <select id="strokeStyle" [(ngModel)]="strokeStyle">
+        <option value="solid">Durchgezogen</option>
+        <option value="dashed">Gestrichelt</option>
+        <option value="dotted">Gepunktet</option>
+        <option value="rectangles">Rechtecke</option>
+        <option value="custom">Custom</option>
+    </select>
+</div>
+
+<div *ngIf="strokeStyle === 'custom'" class="custom-canvas-container">
+    <svg #customSvgCanvas xmlns="http://www.w3.org/2000/svg" width="200" height="100"
+        style="border: 1px solid black; touch-action: none;" (mousedown)="startCustomDrawing($event)"
+        (mousemove)="drawCustom($event)" (mouseup)="stopCustomDrawing()" (mouseleave)="stopCustomDrawing()">
+        <path d="M 0 0" stroke="black" stroke-width="2" fill="none"></path>
+    </svg>
+    <button (click)="saveCustomPath()">Custom speichern</button>
+</div>
+
+
+    <!-- Strichende -->
+    <div class="setting-group">
+        <label for="strokeCap">Strichende:</label>
+        <select id="strokeCap" [(ngModel)]="strokeCap">
+            <option value="round">Rund</option>
+            <option value="square">Quadratisch</option>
+            <option value="butt">Abgestutzt</option>
+        </select>
+    </div>
+
+    <!-- Grid anzeigen -->
+    <div class="setting-group">
+        <label>
+            <input type="checkbox" [(ngModel)]="showGrid" (change)="updateGrid()" />
+            <span>Grid anzeigen</span>
+        </label>
+    </div>
+
+    <!-- Grid-Typ auswählen -->
+    <div *ngIf="showGrid" class="setting-group">
+        <label for="gridType">Grid-Typ:</label>
+        <select id="gridType" [(ngModel)]="gridType" (change)="updateGrid()">
+            <option value="circle">Kreis</option>
+            <option value="rectangle">Rechteck</option>
+        </select>
+    </div>
+
+    <!-- Kreis-Grid-Einstellungen -->
+    <div *ngIf="showGrid && gridType === 'circle'" class="setting-group">
+        <label for="gridCircles">Kreise:</label>
+        <input id="gridCircles" type="range" [(ngModel)]="gridCircles" min="1" max="20" (input)="updateGrid()" />
+        <span>{{ gridCircles }}</span>
+    </div>
+
+    <!-- Rechteck-Grid-Einstellungen -->
+    <div *ngIf="showGrid && gridType === 'rectangle'" class="setting-group">
+        <label for="gridRows">Reihen:</label>
+        <input id="gridRows" type="range" [(ngModel)]="gridRows" min="1" max="20" (input)="updateGrid()" />
+        <span>{{ gridRows }}</span>
+
+        <label for="gridCols">Spalten:</label>
+        <input id="gridCols" type="range" [(ngModel)]="gridCols" min="1" max="20" (input)="updateGrid()" />
+        <span>{{ gridCols }}</span>
+    </div>
+
+
+    <!-- Download-Button -->
+    <button (click)="downloadMandala()">Download Mandala</button>
+</div>
+
+  <svg
+    id="mandalaDrawingSVG"
+    #svgCanvas
+    xmlns="http://www.w3.org/2000/svg"
+    (mousedown)="startDrawing($event)"
+    (mousemove)="draw($event)"
+    (mouseup)="stopDrawing()"
+    (mouseleave)="stopDrawing()"
+    (touchstart)="startDrawing($event)"
+    (touchmove)="draw($event)"
+    (touchend)="stopDrawing()"
+  >
+    <g #mirrorLines></g>
+    <g #gridGroup></g> <!-- Grid -->
+    <g #mandalaGroup></g> <!-- Gezeichnete Linien -->
+  </svg>
+

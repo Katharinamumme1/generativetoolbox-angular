@@ -1,0 +1,13 @@
+.svgcanvas circle,line {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw 4s linear forwards;
+    stroke-width: 20px;
+    animation: draw 5s;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

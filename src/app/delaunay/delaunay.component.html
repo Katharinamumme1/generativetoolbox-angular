@@ -1,0 +1,17 @@
+<div class="settingscontainer">
+    <label for="lineWidth">Strichbreite:</label>
+    <input type="number" id="lineWidth" [(ngModel)]="strokeWidth" min="1" max="10">
+
+    <label for="lineStyle">Linientyp:</label>
+    <select id="lineStyle" [(ngModel)]="strokeStyle">
+        <option value="solid">Durchgezogen</option>
+        <option value="dashed">Gestrichelt</option>
+        <option value="dotted">Punktiert</option>
+    </select>
+
+    <button (click)="downloadSVG()">Download SVG</button>
+</div>
+
+<div class="workspace" (click)="addPoint($event)">
+    <svg #svgCanvas id="drawingSVG-delaunay"></svg>
+</div>

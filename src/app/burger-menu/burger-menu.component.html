@@ -1,0 +1,28 @@
+<div class="burger-menu-container">
+    <!-- Burger Icon -->
+    <div class="burger-icon" [class.active]="isMenuOpen" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Overlay Menu -->
+    <div class="overlay-menu" [class.open]="isMenuOpen">
+        <nav>
+            <ul>
+                <!-- Hauptkategorien -->
+                <li *ngFor="let category of menu" class="menu-item">
+                    <span (click)="toggleSubmenu(category)">
+                        {{ category.name }}
+                    </span>
+
+                    <!-- Unterkategorien -->
+                    <ul class="sub-menu" *ngIf="category.isOpen">
+
+                                
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

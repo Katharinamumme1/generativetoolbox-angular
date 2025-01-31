@@ -1,0 +1,23 @@
+
+<div class="color-switch">
+  <!-- Primary Color Picker -->
+  <input
+    id="primary-color"
+    type="color"
+    class="color-circle"
+    [value]="primaryColor"
+    (input)="changeColor($event, 'primary-color')"
+  />
+
+  <!-- Switch Button -->
+  <div class="switch-circle" (click)="switchColors()"></div>
+
+  <!-- Secondary Color Picker -->
+  <input
+    id="secondary-color"
+    type="color"
+    class="color-circle"
+    [value]="secondaryColor"
+    (input)="changeColor($event, 'secondary-color')"
+  />
+</div>

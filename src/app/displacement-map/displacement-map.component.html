@@ -1,0 +1,30 @@
+<div class="settingscontainer">
+    <label for="displacementMapUpload">Displacement Map hochladen:</label>
+    <input type="file" id="displacementMapUpload" (change)="uploadDisplacementMap($event)" />
+
+    <label for="scaleRange">Displacement Scale: {{ scale }}</label>
+    <input type="range" id="scaleRange" min="1" max="100" [value]="scale"
+        (input)="adjustScale($any($event.target).value)" />
+
+    <label for="fontSizeRange">Schriftgröße: {{ fontSize }}</label>
+    <input type="range" id="fontSizeRange" min="10" max="200" [value]="fontSize"
+        (input)="adjustFontSize($any($event.target).value)" />
+
+    <label for="imageSizeRange">Image Size (%): {{ imageSize }}</label>
+    <input type="range" id="imageSizeRange" min="10" max="500" [value]="imageSize"
+        (input)="adjustImageSize($any($event.target).value)" />
+</div>
+
+<div class="workspace">
+    <svg class="wrapper" xmlns="http://www.w3.org/2000/svg" #svgWorkspace>
+        <defs>
+            <filter id="displacement-filter" x="0" y="0">
+                <feImage #displacementImage href="" />
+                <feDisplacementMap #feDisplacementMap in="SourceGraphic" in2="displacementImage" scale="20"
+                    xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+
+        <text #dynamicText text-anchor="start" dominant-baseline="hanging" filter="url(#displacement-filter)"></text>
+    </svg>
+</div>

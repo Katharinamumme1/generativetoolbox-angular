@@ -1,0 +1,15 @@
+<div class="custom-stroke-font">
+    <div class="settingscontainer">
+        <div class="settingbox">
+            <button (click)="generateCustomFont()" id="generateCustomFontButton" class="icon-button">
+                Generate Custom Font
+            </button>
+        </div>
+
+        <svg id="customlinestyle_canvas" #drawingCanvas></svg>
+    </div>
+
+    <div class="workspace">
+        <div #letterContainer id="letterContainer" class="letter-container"></div>
+    </div>
+</div>

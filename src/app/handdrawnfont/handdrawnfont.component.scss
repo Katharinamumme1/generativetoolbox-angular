@@ -1,0 +1,28 @@
+:host{
+    display: flex;
+}
+.handdrawn-font {
+    text-align: center;
+}
+
+.font-grid {
+display: flex;
+flex-wrap: wrap;
+    justify-content: center;
+       
+  
+}
+
+.letter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.letter-canvas {
+    width: 200px;
+    height: 200px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+}

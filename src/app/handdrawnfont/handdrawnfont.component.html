@@ -1,0 +1,20 @@
+<div class="settingscontainer">
+    <h2>Zeichne deine eigene Schrift!</h2>
+
+<label>
+    <input type="checkbox" [(ngModel)]="showFill" (change)="toggleFill()">
+    Füllung beim Zeichnen anzeigen
+</label>
+    <button (click)="exportFont()">Schrift als Datei exportieren</button>
+</div>
+
+<div class="workspace">
+    <div class="font-grid">
+        <div *ngFor="let drawing of drawings" class="letter-box">
+            <p>{{ drawing.letter }}</p>
+            <svg id="canvas-{{ drawing.letter }}" class="letter-canvas" viewBox="0 0 100 100"></svg>
+        </div>
+    </div>
+
+ 
+</div>

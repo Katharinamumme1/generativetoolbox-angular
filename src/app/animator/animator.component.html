@@ -1,0 +1,10 @@
+<div class="settingscontainer">
+    <h2>Upload SVG</h2>
+    <input type="file" (change)="uploadSVG($event)" accept=".svg" />
+</div>
+
+<div class="workspace">
+    <svg #svgCanvas xmlns="http://www.w3.org/2000/svg" class="svgcanvas" style="width: 100%; height: 100%;">
+        <!-- Das hochgeladene SVG wird hier eingefügt -->
+    </svg>
+</div>

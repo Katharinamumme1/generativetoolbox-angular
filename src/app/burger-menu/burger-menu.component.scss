@@ -1,0 +1,122 @@
+/* burger-menu.component.scss */
+
+/* Container für das Menü */
+.burger-menu-container {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Burger Icon */
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+    /* Wichtig: Über das Overlay legen */
+    position: fixed;
+    /* Fixiere das Icon über dem Overlay */
+    top: 20px;
+    /* Abstand vom oberen Rand */
+    left: 20px;
+    /* Abstand vom rechten Rand */
+}
+
+.burger-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--secondary-color);
+    /* Weißes Icon für bessere Sichtbarkeit über Overlay */
+    transition: all 0.3s ease;
+}
+
+/* Animation für das "X" */
+.burger-icon.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Overlay Menü */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    right: 100%;
+    /* Standardmäßig außerhalb des Bildschirms */
+    width: 100%;
+    height: 100vh;
+    background: var(--primary-color);
+    /* Dunkler Hintergrund */
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    /* Hinter dem Icon */
+    overflow-y: auto;
+}
+
+.overlay-menu.open {
+    right: 0;
+    /* Das Overlay fährt ein */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav .menu-item {
+    margin-bottom: 20px;
+}
+
+nav .menu-item span {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+nav .sub-menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav .sub-menu li {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 5px 0;
+}
+
+/* Container für das Burger-Menü */
+.burger-menu-container {
+    position: relative;
+    z-index: 1000;
+    display: none;
+    /* Standardmäßig ausblenden */
+}
+
+/* Sichtbarkeit für kleine Bildschirme */
+@media (max-width: 768px) {
+    .burger-menu-container {
+        display: block;
+        /* Nur bei kleinen Bildschirmen anzeigen */
+    }
+}
+

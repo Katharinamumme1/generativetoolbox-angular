@@ -1,0 +1,39 @@
+
+
+:host{
+    display: flex;
+ 
+}
+
+
+#smallCanvas{
+            border: 2px solid var(--secondary-color);
+            width:100%;
+             height:200px;
+}
+#largeCanvas{
+        border: 2px solid var(--secondary-color);
+        border-radius: 12%;
+            background-color: var(--primary-color);
+            box-shadow: 5px 5px var(--secondary-color);
+ 
+    width:100%;
+     height:100%;
+}
+@media (max-width: 768px) {
+    :host {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+    
+        }
+
+                #smallCanvas {
+                    border: 2px solid var(--secondary-color);
+                    width: 100%;
+                    height: 200px;
+                }
+
+   
+}
