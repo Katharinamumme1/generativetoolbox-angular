@@ -39,7 +39,7 @@
             fontbaukasten
         </a>
 
-        <a href="#" (click)="navigateAndZoom('fontbaukasten', $event)" [class.active]="isActive('handdrawnfont')">
+        <a href="#" (click)="navigateAndZoom('handdrawnfont', $event)" [class.active]="isActive('handdrawnfont')">
             <div class="category-shape"></div>
             handdrawnfont
         </a>
@@ -110,7 +110,7 @@
                     <app-fontbaukasten></app-fontbaukasten>
                 </div>
                 <div id="handdrawnfont" class="category" [class.mobile]="isMobile"
-                    [ngStyle]="{ top: !isMobile ? '300%' : 'auto', left: !isMobile ? '20%' : 'auto' }">
+                    [ngStyle]="{ top: !isMobile ? '100%' : 'auto', left: !isMobile ? '100%' : 'auto' }">
                     <app-handdrawnFont></app-handdrawnFont>
                 </div>
 </div>
