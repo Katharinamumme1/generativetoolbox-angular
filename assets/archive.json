@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Apfel",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Apfel_Katharina.otf"
+  },
+  {
+    "name": "Ente",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Ente_Katharina.otf"
+  },
+  {
+    "name": "Fuchs",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Fuchs_Katharina.otf"
+  },
+  {
+    "name": "MannimMond",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/MannimMond_katharina.otf"
+  },
+  {
+    "name": "Nutella",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Nutella_Katharina.otf"
+  },
+  {
+    "name": "Senf",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Senf_Katharina.otf"
+  },
+  {
+    "name": "Toastbrot",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Toastbrot_Katharina.otf"
+  },
+  {
+    "name": "cool",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/cool_katharina.otf"
+  },
+  {
+    "name": "hund",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/hund_Katharina.otf"
+  },
+  {
+    "name": "marmeladenbrotmithonig",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/marmeladenbrotmithonig_katharina.otf"
+  },
+  {
+    "name": "spongebob",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/spongebob_katharina.otf"
+  },
+  {
+    "name": "testhand",
+    "type": "font",
+    "createdBy": "katharinaJami",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/testhand_katharinaJami.otf"
+  },
+  {
+    "name": "testname",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/testname_Katharina.otf"
+  },
+  {
+    "name": "SonneMondundSterne",
+    "type": "pattern",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "pattern"
+    ],
+    "filePath": "assets/archive/patterns/SonneMondundSterne_katharina.svg"
+  },
+  {
+    "name": "Stumpfhose",
+    "type": "pattern",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "pattern"
+    ],
+    "filePath": "assets/archive/patterns/Stumpfhose_Katharina.svg"
+  },
+  {
+    "name": "pattern",
+    "type": "pattern",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "pattern"
+    ],
+    "filePath": "assets/archive/patterns/pattern_katharina.svg"
+  },
+  {
+    "name": "sauron",
+    "type": "pattern",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "pattern"
+    ],
+    "filePath": "assets/archive/patterns/sauron_katharina.svg"
+  },
+  {
+    "name": "tangleteaser",
+    "type": "pattern",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "pattern"
+    ],
+    "filePath": "assets/archive/patterns/tangleteaser_katharina.svg"
+  },
+  {
+    "name": "testprojekt",
+    "type": "project",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "project"
+    ],
+    "filePath": "assets/archive/projects/testprojekt_katharina.png"
+  }
+]
