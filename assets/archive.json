@@ -30,6 +30,16 @@
     "filePath": "assets/archive/fonts/Fuchs_Katharina.otf"
   },
   {
+    "name": "Klette",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Klette_Katharina.otf"
+  },
+  {
     "name": "MannimMond",
     "type": "font",
     "createdBy": "katharina",
