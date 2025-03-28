@@ -70,6 +70,16 @@
     "filePath": "assets/archive/fonts/Toastbrot_Katharina.otf"
   },
   {
+    "name": "chaosgrid",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/chaosgrid_katharina.otf"
+  },
+  {
     "name": "cool",
     "type": "font",
     "createdBy": "katharina",
@@ -78,6 +88,26 @@
       "font"
     ],
     "filePath": "assets/archive/fonts/cool_katharina.otf"
+  },
+  {
+    "name": "griddrawn",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/griddrawn_katharina.otf"
+  },
+  {
+    "name": "handdrawnneu",
+    "type": "font",
+    "createdBy": "Katha",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/handdrawnneu_Katha.otf"
   },
   {
     "name": "hund",
@@ -110,14 +140,34 @@
     "filePath": "assets/archive/fonts/spongebob_katharina.otf"
   },
   {
-    "name": "testhand",
+    "name": "svgfiltertest",
     "type": "font",
-    "createdBy": "katharinaJami",
+    "createdBy": "katha",
     "createdWith": "Webtool by Katharina Mumme / Jami",
     "tags": [
       "font"
     ],
-    "filePath": "assets/archive/fonts/testhand_katharinaJami.otf"
+    "filePath": "assets/archive/fonts/svgfiltertest_katha.otf"
+  },
+  {
+    "name": "test72",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/test72_katharina.otf"
+  },
+  {
+    "name": "testgrid",
+    "type": "font",
+    "createdBy": "rina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/testgrid_rina.otf"
   },
   {
     "name": "testname",
