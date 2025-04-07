@@ -1,13 +1,33 @@
 [
   {
-    "name": "Apfel",
+    "name": "BLOBBY",
     "type": "font",
-    "createdBy": "Katharina",
+    "createdBy": "carla moje",
     "createdWith": "Webtool by Katharina Mumme / Jami",
     "tags": [
       "font"
     ],
-    "filePath": "assets/archive/fonts/Apfel_Katharina.otf"
+    "filePath": "assets/archive/fonts/BLOBBY_carla moje.otf"
+  },
+  {
+    "name": "BOGEN",
+    "type": "font",
+    "createdBy": "carla moje",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/BOGEN_carla moje.otf"
+  },
+  {
+    "name": "DisplacedFont",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/DisplacedFont_katharina.otf"
   },
   {
     "name": "Ente",
@@ -20,6 +40,16 @@
     "filePath": "assets/archive/fonts/Ente_Katharina.otf"
   },
   {
+    "name": "Fingerhut",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Fingerhut_Katharina.otf"
+  },
+  {
     "name": "Fuchs",
     "type": "font",
     "createdBy": "Katharina",
@@ -28,6 +58,26 @@
       "font"
     ],
     "filePath": "assets/archive/fonts/Fuchs_Katharina.otf"
+  },
+  {
+    "name": "Glitch",
+    "type": "font",
+    "createdBy": "Katharina Sophie Mumme",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Glitch_Katharina Sophie Mumme.otf"
+  },
+  {
+    "name": "Kamm",
+    "type": "font",
+    "createdBy": "katharina Sophie Mumme",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Kamm_katharina Sophie Mumme.otf"
   },
   {
     "name": "Klette",
@@ -40,16 +90,6 @@
     "filePath": "assets/archive/fonts/Klette_Katharina.otf"
   },
   {
-    "name": "MannimMond",
-    "type": "font",
-    "createdBy": "katharina",
-    "createdWith": "Webtool by Katharina Mumme / Jami",
-    "tags": [
-      "font"
-    ],
-    "filePath": "assets/archive/fonts/MannimMond_katharina.otf"
-  },
-  {
     "name": "Nutella",
     "type": "font",
     "createdBy": "Katharina",
@@ -60,14 +100,34 @@
     "filePath": "assets/archive/fonts/Nutella_Katharina.otf"
   },
   {
-    "name": "Senf",
+    "name": "POST-IT",
     "type": "font",
-    "createdBy": "Katharina",
+    "createdBy": "carla moje",
     "createdWith": "Webtool by Katharina Mumme / Jami",
     "tags": [
       "font"
     ],
-    "filePath": "assets/archive/fonts/Senf_Katharina.otf"
+    "filePath": "assets/archive/fonts/POST-IT_carla moje.otf"
+  },
+  {
+    "name": "PerlinNoiseFont",
+    "type": "font",
+    "createdBy": "Carla, Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/PerlinNoiseFont_Carla, Katharina.otf"
+  },
+  {
+    "name": "SCHATTEN",
+    "type": "font",
+    "createdBy": "2",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/SCHATTEN_2.otf"
   },
   {
     "name": "Toastbrot",
@@ -78,6 +138,56 @@
       "font"
     ],
     "filePath": "assets/archive/fonts/Toastbrot_Katharina.otf"
+  },
+  {
+    "name": "WIGGLE",
+    "type": "font",
+    "createdBy": "carla moje",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/WIGGLE_carla moje.otf"
+  },
+  {
+    "name": "Zackig",
+    "type": "font",
+    "createdBy": "Katharina Sophie Mumme",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/Zackig_Katharina Sophie Mumme.otf"
+  },
+  {
+    "name": "brocken",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/brocken_Katharina.otf"
+  },
+  {
+    "name": "bumpy",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/bumpy_katharina.otf"
+  },
+  {
+    "name": "bumpyglitch",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/bumpyglitch_katharina.otf"
   },
   {
     "name": "chaosgrid",
@@ -100,14 +210,24 @@
     "filePath": "assets/archive/fonts/cool_katharina.otf"
   },
   {
-    "name": "griddrawn",
+    "name": "coral",
     "type": "font",
     "createdBy": "katharina",
     "createdWith": "Webtool by Katharina Mumme / Jami",
     "tags": [
       "font"
     ],
-    "filePath": "assets/archive/fonts/griddrawn_katharina.otf"
+    "filePath": "assets/archive/fonts/coral_katharina.otf"
+  },
+  {
+    "name": "edgy",
+    "type": "font",
+    "createdBy": "katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/edgy_katharina.otf"
   },
   {
     "name": "handdrawnneu",
@@ -130,34 +250,44 @@
     "filePath": "assets/archive/fonts/hund_Katharina.otf"
   },
   {
-    "name": "marmeladenbrotmithonig",
+    "name": "kittycat",
+    "type": "font",
+    "createdBy": "Laura Martinez",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/kittycat_Laura Martinez.otf"
+  },
+  {
+    "name": "kurvig",
+    "type": "font",
+    "createdBy": "katharina Sophie Mumme",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/kurvig_katharina Sophie Mumme.otf"
+  },
+  {
+    "name": "messi",
+    "type": "font",
+    "createdBy": "Katharina",
+    "createdWith": "Webtool by Katharina Mumme / Jami",
+    "tags": [
+      "font"
+    ],
+    "filePath": "assets/archive/fonts/messi_Katharina.otf"
+  },
+  {
+    "name": "netz",
     "type": "font",
     "createdBy": "katharina",
     "createdWith": "Webtool by Katharina Mumme / Jami",
     "tags": [
       "font"
     ],
-    "filePath": "assets/archive/fonts/marmeladenbrotmithonig_katharina.otf"
-  },
-  {
-    "name": "spongebob",
-    "type": "font",
-    "createdBy": "katharina",
-    "createdWith": "Webtool by Katharina Mumme / Jami",
-    "tags": [
-      "font"
-    ],
-    "filePath": "assets/archive/fonts/spongebob_katharina.otf"
-  },
-  {
-    "name": "svgfiltertest",
-    "type": "font",
-    "createdBy": "katha",
-    "createdWith": "Webtool by Katharina Mumme / Jami",
-    "tags": [
-      "font"
-    ],
-    "filePath": "assets/archive/fonts/svgfiltertest_katha.otf"
+    "filePath": "assets/archive/fonts/netz_katharina.otf"
   },
   {
     "name": "test72",
@@ -168,16 +298,6 @@
       "font"
     ],
     "filePath": "assets/archive/fonts/test72_katharina.otf"
-  },
-  {
-    "name": "testgrid",
-    "type": "font",
-    "createdBy": "rina",
-    "createdWith": "Webtool by Katharina Mumme / Jami",
-    "tags": [
-      "font"
-    ],
-    "filePath": "assets/archive/fonts/testgrid_rina.otf"
   },
   {
     "name": "testname",
